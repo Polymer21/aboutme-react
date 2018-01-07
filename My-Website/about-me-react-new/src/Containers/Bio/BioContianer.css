@@ -1,0 +1,102 @@
+.bio-container {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.bio-background {
+    width: 100%;
+    height: 100vh;
+    background-color: indianred;
+    position: fixed;
+    z-index: -1;
+    margin: 0; 
+}
+
+.bio-layout {
+    display: flex;
+    animation: bio-animation .5s    
+}
+
+.bio-nav {
+    display: flex;
+    justify-content: center;
+    /* animation: bio-animation 1s; */
+}
+
+.bio-main-stuff {
+    display: flex;
+    justify-content: center;
+}
+
+.bio-name {
+    font-size: 100px;
+    margin-left: 20px;
+}
+
+.bio-image {
+    height: 100vh;
+    width: 50%;
+    margin: 0;
+    /* animation: bio-animation 1s */
+}
+
+.name-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-content {
+    margin: 25px;
+    font-size: 25px;
+}
+
+.bio-link {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px;
+}
+
+.bio-link:hover {
+    color: #000;
+}
+
+.bio-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.bio-link:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.bioImageHidden {
+    display: none;
+}
+
+.bioNavHidden {
+    display: none;
+}
+
+.bioLayoutHidden {
+    display: none;
+}
+
+@keyframes bio-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
